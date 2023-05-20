@@ -1,4 +1,6 @@
 مدل پست (Post):
+
+```
 from django.db import models
 
 class Post(models.Model):
@@ -8,10 +10,11 @@ class Post(models.Model):
     # دیگر فیلدها مانند نویسنده و سایر ویژگی‌ها
 
     def __str__(self):
-        return self.title
-        
+        return self.title`
+ ```       
         
     مدل کامنت (Comment):
+````
     from django.db import models
 
 class Comment(models.Model):
@@ -22,6 +25,7 @@ class Comment(models.Model):
 
     def __str__(self):
         return self.content
+ ````
         
         
         
