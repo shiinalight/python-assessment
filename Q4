@@ -6,3 +6,27 @@ def fib_sequence(n):
             break
         fib.append(next_fib)
     return fib
+    
+    
+    
+    or:
+    
+    
+    def fibonacci_sequence(n):
+    sequence = []
+    
+    if n >= 1:
+        sequence.append(0)
+    
+    if n >= 2:
+        sequence.append(1)
+    
+    i = 2
+    while True:
+        next_number = sequence[i-1] + sequence[i-2]
+        if next_number >= n:
+            break
+        sequence.append(next_number)
+        i += 1
+    
+    return sequence
