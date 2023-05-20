@@ -1,0 +1,10 @@
+from itertools import zip_longest
+
+def merge_lists(lst1, lst2):
+    result = []
+    for x, y in zip_longest(lst1, lst2):
+        if x is not None:
+            result.append(x)
+        if y is not None:
+            result.append(y)
+    return result
