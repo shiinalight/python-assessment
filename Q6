@@ -1,0 +1,13 @@
+import requests
+
+url = "https://api.offch.com/api/shops?limit=10"
+response = requests.get(url)
+data = response.json()
+
+low_rating_shops = []
+
+for shop in data:
+    if shop["rating"] < 4:
+        low_rating_shops.append(shop["name"])
+
+print(low_rating_shops)
