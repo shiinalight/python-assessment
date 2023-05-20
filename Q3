@@ -1,9 +1,13 @@
-def find_pair_with_sum(lst):
-    seen = {}
-    result = []
-    for num in lst:
+def find_pair_with_sum(numbers):
+    num_count = {}
+    
+    for num in numbers:
+        num_count[num] = num_count.get(num, 0) + 1
+    
+    for num in numbers:
         complement = 1 - num
-        if complement in seen:
-            result.append([complement, num])
-        seen[num] = True
-    return result
+        if complement in num_count and num_count[complement] > 0:
+            return [num, complement]
+    
+    return []
+
