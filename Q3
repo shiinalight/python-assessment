@@ -11,3 +11,22 @@ def find_pair_with_sum(numbers):
     
     return []
 
+
+
+or:
+
+
+
+def find_pair_with_sum(lst):
+   num_count = {}
+    result = []
+    for num in lst:
+        complement = 1 - num
+        if complement in num_count:
+            result.append([complement, num])
+        num_count[num] = True
+    return result
+
+
+
+
