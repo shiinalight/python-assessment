@@ -1,0 +1,10 @@
+from django.shortcuts import render
+from datetime import datetime
+
+def datetime_view(request):
+    now = datetime.now()
+    formatted_datetime = now.strftime("%B %d, %Y %H:%M:%S")
+    context = {
+        'current_datetime': formatted_datetime
+    }
+    return render(request, 'datetime_template.html', context)
