@@ -1,4 +1,4 @@
-مدل پست (Post):
+## Post model:
 
 ```
 from django.db import models
@@ -13,7 +13,7 @@ class Post(models.Model):
         return self.title`
  ```       
         
-    مدل کامنت (Comment):
+   ## Comment Model
 ````
     from django.db import models
 
